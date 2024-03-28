@@ -9,3 +9,5 @@ cdk.out
 
 # ssl script
 .ssl
+
+.DS_Store
