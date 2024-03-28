@@ -132,7 +132,7 @@ Set the `COGNITO_DOMAIN_NAME` environment variable. This will be the domain of t
 export COGNITO_DOMAIN_NAME=<name you want to give to your cognito hosted ui domain>
 ```
 
-The default value is defined in the [base-infra-stack.ts](./lib/base-infra-stack.ts#260).
+The default value is defined in the [base-infra-stack.ts](./lib/base-infra-stack.ts#L260).
 
 ### Install dependencies (if not already done)
 
