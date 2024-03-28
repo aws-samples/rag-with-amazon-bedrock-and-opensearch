@@ -11,3 +11,8 @@ cdk.out
 .ssl
 
 .DS_Store
+
+.venv
+venv
+env
+.env
