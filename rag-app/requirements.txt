@@ -1,0 +1,11 @@
+langchain
+langchain-community
+langchain-openai
+boto3>=1.28.27
+opensearch-py
+unstructured
+openai
+anthropic
+streamlit
+tiktoken
+toml
