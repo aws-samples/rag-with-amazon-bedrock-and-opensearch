@@ -1,0 +1,7 @@
+openai
+langchain
+langchain-community
+langchain-openai
+opensearch-py
+unstructured
+# nltk
