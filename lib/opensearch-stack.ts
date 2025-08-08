@@ -106,6 +106,7 @@ export class OpenSearchStack extends cdk.Stack {
               "Principal": [
                 props.testComputeHostRole.roleArn,
                 `arn:aws:iam::${this.account}:role/Admin`,
+                `arn:aws:iam::${this.account}:root`,
                 props.lambdaRole.roleArn,
                 props.ecsTaskRole.roleArn
               ],
