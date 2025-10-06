@@ -14,6 +14,8 @@ import * as secretsmanager from 'aws-cdk-lib/aws-secretsmanager';
 import * as elbv2 from "aws-cdk-lib/aws-elasticloadbalancingv2";
 import * as elbv2_actions from "aws-cdk-lib/aws-elasticloadbalancingv2-actions";
 import { SqsEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
+import * as cloudtrail from "aws-cdk-lib/aws-cloudtrail";
+
 
 import path = require("path");
 
@@ -46,6 +48,11 @@ export class BaseInfraStack extends cdk.Stack {
     if (!(validRegions.includes(regionPrefix))) {
         throw new Error('Unsupported CDK_DEFAULT_REGION specified')
     };
+
+    // Trail for logging AWS API events
+    const trail = new cloudtrail.Trail(this, 'myCloudTrail', {
+      managementEvents: cloudtrail.ReadWriteType.ALL
+    });
 
     const indexName = process.env.AOSS_INDEX_NAME || 'rag-oai-index';
     console.log(`AOSS_INDEX_NAME: ${indexName}`);
